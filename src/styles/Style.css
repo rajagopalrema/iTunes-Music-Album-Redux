@@ -1,0 +1,16 @@
+.card-header-part{
+    background-color:'#5A5A5A';
+    color:'#ffffff'
+}
+
+.img-thumb-nail{
+    height:180px;
+    width:180px;
+    border-radius: 25px;
+}
+
+.imgAudio
+{
+    height:80px;
+    width:80px;
+}

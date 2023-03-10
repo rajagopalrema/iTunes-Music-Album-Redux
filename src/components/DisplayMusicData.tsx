@@ -1,6 +1,6 @@
 import { Dispatch, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
-import { IMusicAlbumData } from "../interface/interface";
+import { IMusicAlbumData } from "../interface/Interface";
 import { fetchMusicAlbumData } from "../redux/actions/Action";
 import InfiniteScroll from "react-infinite-scroller";
 import DisplayTable from "../components/DisplayTable";
@@ -56,7 +56,7 @@ function DisplayMusicData() {
         <div className="jumbotron jumbotron-fluid">
           <div className="container">
             <h5 className="display-6 text-muted"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/ITunes_logo.svg/2039px-ITunes_logo.svg.png" style={{ width: '80px', height: '80px', padding: '20px 20px 20px 20px' }}></img><strong>itunes - Music Album Search</strong></h5>
-            <div className="input-group w-95 ">
+            <div className="input-group w-95 shadow p-3 mb-5 bg-body rounded">
               <input type="search" onChange={handleSearch} className="form-control rounded" placeholder="Enter artists, albums and/or songs to search..." aria-label="Search" aria-describedby="search-addon" />
               <button type="button" onClick={searchString} className="btn btn-danger">Search</button>
             </div>
@@ -66,7 +66,7 @@ function DisplayMusicData() {
       
       {musicalAlbumData.length === 0 && !loading ? (
         <div className="d-flex justify-content-center">
-          <p><h2 style={{ paddingTop: '100px' }}>Ooops...No result found...</h2> </p>
+          <p><h2 className="text-danger pt-50">Ooops...No result found...</h2> </p>
         </div>
       ) : (
         <div>
@@ -75,11 +75,11 @@ function DisplayMusicData() {
             initialLoad={false}
             loadMore={musicAlbumDataLoad}
             hasMore={hasMore}
-            loader={<div className="d-flex justify-content-center">
+            loader={<div className="pt-50"><div className="d-flex justify-content-center">
               <div className="spinner-border text-danger" role="status">
                 <span className="sr-only"></span>
               </div>
-            </div>}
+            </div></div>}
             useWindow={true}>
             <DisplayTable musicAlbumList={getMusicDataList()} />
           </InfiniteScroll>

@@ -19,8 +19,3 @@ export interface IMusicAlbumData{
     previewUrl:string,
     trackViewUrl:string
 }
-
-export interface IMusicDataError{
-    type:boolean,
-    error:string
-}

@@ -9,6 +9,7 @@ import { applyMiddleware } from 'redux';
 import rootReducer from './redux/reducers/RootReducer';
 import 'bootstrap/dist/css/bootstrap.css';
 
+
 const redux = require('redux');
 const createStore = redux.createStore;
 const store = createStore(rootReducer,applyMiddleware(thunk));

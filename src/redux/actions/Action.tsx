@@ -5,7 +5,7 @@ import {
     GET_MUSIC_ALBUM_NO_DATA,
     GET_MUSIC_ALBUM_SUCCESS
 } from '../constants/MusicAlbumActionTypes';
-import { IMusicAlbumData} from '../../interface/interface';
+import { IMusicAlbumData} from '../../interface/Interface';
 import axios from "axios";
 
 export const GetMusicAlbumDataStart = (loader: boolean) => ({
